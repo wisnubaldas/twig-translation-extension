@@ -7,7 +7,7 @@
  */
 namespace Raph\Twig\Extension;
 
-class Translation extends \Twig_Extension
+class TranslationExtension extends \Twig_Extension
 {
   private $translator = NULL;
 
