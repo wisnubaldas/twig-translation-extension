@@ -1,12 +1,22 @@
 {
+    "version": "1.0.0",
     "name": "rafaph/twig-translation-extension",
     "description": "Twig translate function for Illuminate\\Translation\\Translator.",
+    "keywords": [
+        "twig",
+        "translate",
+        "localization"
+    ],
+    "homepage": "https://github.com/rafaph/twig-translation-extension#README",
+    "support": {
+        "issues": "https://github.com/rafaph/twig-translation-extension/issues",
+        "source": "https://github.com/rafaph/twig-translation-extension"
+    },
     "license": "MIT",
     "authors": [{
         "name": "Raphael Castro",
         "email": "rafaphcastro@gmail.com"
     }],
-    "minimum-stability": "stable",
     "require": {
         "php": ">=5.5",
         "twig/twig": "^1.24",

@@ -9,9 +9,10 @@ namespace Raph\Twig\Extension;
 
 class TranslationExtension extends \Twig_Extension
 {
-  private $translator = NULL;
+  private $translator = null;
 
-  public function __construct($translator) {
+  public function __construct($translator)
+  {
     $this->translator = $translator;
   }
 
@@ -23,20 +24,19 @@ class TranslationExtension extends \Twig_Extension
   public function getFunctions()
   {
     return [
-      new \Twig_SimpleFunction('translate', [$this, 'translate']),
-      new \Twig_SimpleFunction('_', [$this, 'translate'])
+      new \Twig_SimpleFunction('trans', [$this, 'trans']),
+      new \Twig_SimpleFunction('trans_choice', [$this, 'transChoice'])
     ];
   }
 
-  public function translate($name)
-  { 
-    $translator = $this->translator;
-    if(!$translator) {
-      throw new \Exception('No translator class found.');
-    }
-    if(!method_exists($translator, 'trans')) {
-      throw new \Exception('No translate method found in translator class.');
-    }    
-    return $translator->trans($name);
+  public function trans($id, array $parameters = [], $domain = 'messages', $locale = null)
+  {
+    return $this->translator->trans($id, $parameters, $domain, $locale);
   }
+
+  public function transChoice($id, $number, array $parameters = [], $domain = 'messages', $locale = null)
+  {
+    return $this->translator->transChoice($id, $number, $parameters, $domain, $locale);
+  }
+  
 }
