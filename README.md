@@ -2,7 +2,7 @@
 
 Translation functions for Twig provide by [Illuminate/translation](https://github.com/illuminate/translation).
 
-#### Instalation
+#### Installation
 
 ```shell
 composer require rafaph/twig-translation-extension
