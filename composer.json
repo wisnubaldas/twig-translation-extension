@@ -1,0 +1,20 @@
+{
+    "name": "rafaph/twig-translation-extension",
+    "description": "Twig translate function for Illuminate\\Translation\\Translator.",
+    "license": "MIT",
+    "authors": [{
+        "name": "Raphael Castro",
+        "email": "rafaphcastro@gmail.com"
+    }],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.5",
+        "twig/twig": "^1.24",
+        "illuminate/translation": "^5.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Raph\\Twig\\Extension\\": "src"
+        }
+    }
+}
